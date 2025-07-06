@@ -1,0 +1,357 @@
+***************************************************
+prompt 1 - GEMINI
+***************************************************
+- capturar la pantalla de EF y pasarselo a Gemini con este prompt.
+
+prompt 1 — análisis del diseño en JSON:
+A partir de estas capturas, quiero que generes un sistema de diseño en formato JSON que
+contenga todo lo necesario para replicar este estilo de forma coherente: colores, estructura
+visual, tipos de elementos, jerarquía y cualquier patrón relevante que detectes.
+No hace falta que describas lo que aparece en las imágenes —solo quiero que analices el
+estilo visual.
+El objetivo es que otra IA pueda usar ese JSON como base para diseñar una app con este
+mismo look, sin copiar el contenido exacto.
+
+
+***************************************************
+prompt 2 - Firebase Studio
+**************************************************
+Prompt 2 — generar app educativa en Firebase Studio:
+
+Quiero que generes un dashboard para mostrar el programa semanal de las clases de ingles y actividades extra escolares 
+de los alumnos de una academia de ingles en inglaterra en una sola página con estas características:
+– En la cabecera de la pagina aparece "July 2025" como título. 
+- A continuación pinta una linea para separar este apartado.
+- A contiuación el calendario semanal de lunes a domingo en formato tabla. Los días se representaran con una sola letra
+en ingles. Sigue este ejemplo.
+  M    T   W   T   F   S   S
+  7    8   9   10  11  12  13
+
+- A continuación pinta una linea para separar este apartado
+- Cada día del calendario semanal es un link. Cuando el usuario pulsa sobre el día numérico, la aplicación muestra 
+el programa del día correspondiente. Incluye las clases de ingles y las actividades deportivas extra escolares. Cuando 
+muestres las actividades deportivas, pintalos con el color de activity.
+– El programa de las clases de ingles y las actividades deportivas debe estar organizado en tarjetas (layout tipo cards), 
+en un diseño limpio y profesional
+
+Estos son los use cases que tienes que cubrir:
+   - use case 1: El usuario pulsa sobre el día "7":
+        - La aplicación muestra como subtítulo "Mo, 7/7/2025" y a continuación en formato bloques las siguientes actividades:
+            - XB2-1 (28 LC)
+            icono de horario 08:45 - 10:05
+            Session 13
+            - XB2-1 (28 LC)
+            icono de horario 10:20 - 11:40
+            Session 13
+            - XMWGrammar/Vocabulary 4 
+            icono de horario 11:55 - 13:15
+            Session 04
+            - Departure Meeting 13:50
+            icono de horario 13:50 - 14:30
+            Basketball Court
+            - Football
+            icono de horario 19:30 - 21:30   
+    - use case 2: El usuario pulsa sobre el día "8":
+            - La aplicación muestra como subtítulo "Tu, 7/8/2025" y a continuación en formato bloques las siguientes actividades:
+                - XB2-1 (28 LC)
+                icono de horario 11:55 - 13:15
+                Session 15
+                - XB2-1 (28 LC)
+                icono de horario 14:00 - 15:20
+                Session 15
+                - XTSpeaking/Listening 4
+                icono de horario 15:30 - 16:50
+                Session 01
+                - XTSpeaking/Listening 4
+                icono de horario 17:00 - 18:20
+                Session 01
+                - Beach Volleyball
+                icono de horario 17:30 - 21:30   
+- use case 3: El usuario pulsa sobre el día "9":
+            - La aplicación muestra como subtítulo "We, 7/9/2025" y a continuación en formato bloques las siguientes actividades:
+                - XB2-1 (28 LC)
+                icono de horario 08:45 - 10:05
+                Session 20 (Lecture Room B)
+                - XB2-1 (28 LC)
+                icono de horario 10:20 - 11:40
+                Session 20(Lecture Room B)
+                - XMWGrammar/Vocabulary 4 
+                icono de horario 11:55 - 13:15
+                Session 04
+                - Laser Quest 
+                icono de horario 15:30 - 16:30
+- use case 4: El usuario pulsa sobre el día "10":
+            - La aplicación muestra como subtítulo "th, 7/10/2025" y a continuación en formato bloques las siguientes actividades:
+                - XB2-1 (28 LC)
+                icono de horario 08:45 - 10:05
+                Session 11 
+                - XB2-1 (28 LC)
+                icono de horario 10:20 - 11:40
+                Session 11
+                - XProject (2427)
+                icono de horario 14:00 - 15:20
+                Join the class via Zoom
+
+- use case 5: El usuario pulsa sobre el día "11":
+            - La aplicación muestra como subtítulo "Fr, 7/11/2025" y a continuación en formato bloques las siguientes actividades:
+                - XB2-1 (28 LC)
+                icono de horario 11:55 - 13:15
+                Session 15
+                - XB2-1 (28 LC)
+                icono de horario 14:00 - 15:20
+                Session 15
+                - Lecture
+                icono de horario 15:30 - 16:50
+                Join the class via Zoom
+                
+- use case 6: El usuario pulsa sobre el día "12":
+            - La aplicación muestra como subtítulo "Sa, 7/12/2025" y a continuación en formato bloques las siguientes actividades:
+                - London Stansted to Santander
+                Flight:  FR2612 
+                icono de horario 13:15 - 16:15
+                Stansted Airport (London)
+
+- use case 6: El usuario pulsa sobre el día "13":
+            - La aplicación muestra como subtítulo "Su, 7/13/2025" y a continuación en formato bloques las siguientes actividades:
+                - Enjoying family and the beach in Somo
+                icono de horario All day 
+                Somo (Cantabria)
+
+- Este es el sistema de diseño que quiero que sigas (copiado de un diseño real). Usa esto
+  como guía para los estilos, estructura visual y jerarquía:
+
+        {
+        "designSystem": {
+            "name": "Clarity Scheduler UI",
+            "version": "1.0.0",
+            "description": "Un sistema de diseño minimalista y funcional para una aplicación de agenda o calendario, enfocado en la claridad y la legibilidad.",
+            "theme": "light",
+            "palette": {
+            "primary": {
+                "main": "#0B57D0",
+                "contrastText": "#FFFFFF"
+            },
+            "background": {
+                "default": "#FFFFFF",
+                "surface": "#FFFFFF",
+                "subtle": "#F6F6F6"
+            },
+            "text": {
+                "primary": "#1F1F1F",
+                "secondary": "#444746",
+                "onPrimary": "#FFFFFF"
+            },
+            "icon": {
+                "main": "#444746"
+            },
+            "divider": {
+                "main": "#E0E0E0"
+            }
+            },
+            "typography": {
+            "fontFamily": "System, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+            "weights": {
+                "regular": 400,
+                "medium": 500,
+                "bold": 700
+            },
+            "styles": {
+                "screenTitle": {
+                "fontSize": "1.5rem",
+                "fontWeight": 700,
+                "color": "palette.text.primary"
+                },
+                "sectionTitle": {
+                "fontSize": "1.125rem",
+                "fontWeight": 400,
+                "color": "palette.text.primary"
+                },
+                "cardTitle": {
+                "fontSize": "1rem",
+                "fontWeight": 700,
+                "color": "palette.text.primary"
+                },
+                "body": {
+                "fontSize": "0.875rem",
+                "fontWeight": 400,
+                "color": "palette.text.secondary"
+                },
+                "label": {
+                "fontSize": "0.75rem",
+                "fontWeight": 500,
+                "color": "palette.text.secondary"
+                },
+                "navLabel": {
+                "fontSize": "0.625rem",
+                "fontWeight": 400,
+                "color": "palette.text.secondary"
+                }
+            }
+            },
+            "spacing": {
+            "baseUnit": "8px",
+            "xs": "4px",
+            "sm": "8px",
+            "md": "16px",
+            "lg": "24px"
+            },
+            "shape": {
+            "borderRadius": {
+                "sm": "8px",
+                "md": "16px",
+                "lg": "24px"
+            }
+            },
+            "shadows": {
+            "subtle": "0 1px 2px 0 rgba(0, 0, 0, 0.03)",
+            "card": "0 4px 8px 0 rgba(0, 0, 0, 0.08)"
+            },
+            "components": {
+            "calendarWeekView": {
+                "properties": {
+                "padding": ["spacing.md", "spacing.lg"],
+                "itemGap": "spacing.md"
+                },
+                "elements": {
+                "day": {
+                    "state": "default",
+                    "layout": {
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "alignItems": "center",
+                    "gap": "spacing.xs"
+                    },
+                    "weekdayLabel": {
+                    "typography": "typography.styles.label"
+                    },
+                    "dayNumber": {
+                    "typography": "typography.styles.body",
+                    "color": "palette.text.primary",
+                    "padding": ["spacing.sm", "spacing.sm"],
+                    "borderRadius": "shape.borderRadius.sm"
+                    },
+                    "eventIndicator": {
+                    "size": "4px",
+                    "color": "palette.primary.main",
+                    "shape": "circle"
+                    }
+                },
+                "daySelected": {
+                    "state": "selected",
+                    "extends": "day",
+                    "dayNumber": {
+                    "backgroundColor": "palette.primary.main",
+                    "color": "palette.text.onPrimary"
+                    }
+                }
+                }
+            },
+            "infoCard": {
+                "properties": {
+                "backgroundColor": "palette.background.subtle",
+                "padding": "spacing.md",
+                "borderRadius": "shape.borderRadius.md",
+                "margin": ["0", "spacing.lg", "spacing.md"],
+                "shadow": "shadows.subtle"
+                },
+                "elements": {
+                "text": {
+                    "typography": "typography.styles.body",
+                    "textAlign": "center"
+                }
+                }
+            },
+            "eventCard": {
+                "properties": {
+                "backgroundColor": "palette.background.surface",
+                "padding": "spacing.md",
+                "borderRadius": "shape.borderRadius.md",
+                "margin": ["0", "spacing.lg", "spacing.md"],
+                "shadow": "shadows.card",
+                "layout": {
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "gap": "spacing.md"
+                }
+                },
+                "elements": {
+                "icon": {
+                    "type": "leadingIcon",
+                    "asset": "book",
+                    "color": "palette.icon.main",
+                    "fontSize": "24px"
+                },
+                "content": {
+                    "layout": {
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "gap": "spacing.xs"
+                    }
+                },
+                "title": {
+                    "typography": "typography.styles.cardTitle"
+                },
+                "details": {
+                    "layout": {
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "alignItems": "center",
+                    "gap": "spacing.sm"
+                    },
+                    "icon": {
+                    "color": "palette.icon.main",
+                    "fontSize": "16px"
+                    },
+                    "text": {
+                    "typography": "typography.styles.body"
+                    }
+                }
+                }
+            },
+            "bottomNavBar": {
+                "properties": {
+                "backgroundColor": "palette.background.surface",
+                "borderTop": "1px solid",
+                "borderColor": "palette.divider.main",
+                "height": "64px",
+                "padding": ["spacing.xs", "0"],
+                "layout": {
+                    "display": "flex",
+                    "justifyContent": "space-around"
+                }
+                },
+                "elements": {
+                "navItem": {
+                    "state": "default",
+                    "layout": {
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "alignItems": "center",
+                    "gap": "spacing.xs"
+                    },
+                    "icon": {
+                    "fontSize": "24px",
+                    "color": "palette.icon.main"
+                    },
+                    "label": {
+                    "typography": "typography.styles.navLabel"
+                    }
+                },
+                "navItemActive": {
+                    "state": "active",
+                    "extends": "navItem",
+                    "icon": {
+                    "color": "palette.primary.main"
+                    },
+                    "label": {
+                    "color": "palette.primary.main"
+                    }
+                }
+                }
+            }
+            }
+        }
+        }
+
+
+- Solo necesito el código en HTML, CSS y JavaScript, sin frameworks ni librerías externas

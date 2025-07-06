@@ -1,0 +1,232 @@
+{
+  "designSystem": {
+    "name": "Clarity Scheduler UI",
+    "version": "1.0.0",
+    "description": "Un sistema de diseño minimalista y funcional para una aplicación de agenda o calendario, enfocado en la claridad y la legibilidad.",
+    "theme": "light",
+    "palette": {
+      "primary": {
+        "main": "#0B57D0",
+        "contrastText": "#FFFFFF"
+      },
+      "background": {
+        "default": "#FFFFFF",
+        "surface": "#FFFFFF",
+        "subtle": "#F6F6F6"
+      },
+      "text": {
+        "primary": "#1F1F1F",
+        "secondary": "#444746",
+        "onPrimary": "#FFFFFF"
+      },
+      "icon": {
+        "main": "#444746"
+      },
+      "divider": {
+        "main": "#E0E0E0"
+      }
+    },
+    "typography": {
+      "fontFamily": "System, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+      "weights": {
+        "regular": 400,
+        "medium": 500,
+        "bold": 700
+      },
+      "styles": {
+        "screenTitle": {
+          "fontSize": "1.5rem",
+          "fontWeight": 700,
+          "color": "palette.text.primary"
+        },
+        "sectionTitle": {
+          "fontSize": "1.125rem",
+          "fontWeight": 400,
+          "color": "palette.text.primary"
+        },
+        "cardTitle": {
+          "fontSize": "1rem",
+          "fontWeight": 700,
+          "color": "palette.text.primary"
+        },
+        "body": {
+          "fontSize": "0.875rem",
+          "fontWeight": 400,
+          "color": "palette.text.secondary"
+        },
+        "label": {
+          "fontSize": "0.75rem",
+          "fontWeight": 500,
+          "color": "palette.text.secondary"
+        },
+        "navLabel": {
+          "fontSize": "0.625rem",
+          "fontWeight": 400,
+          "color": "palette.text.secondary"
+        }
+      }
+    },
+    "spacing": {
+      "baseUnit": "8px",
+      "xs": "4px",
+      "sm": "8px",
+      "md": "16px",
+      "lg": "24px"
+    },
+    "shape": {
+      "borderRadius": {
+        "sm": "8px",
+        "md": "16px",
+        "lg": "24px"
+      }
+    },
+    "shadows": {
+      "subtle": "0 1px 2px 0 rgba(0, 0, 0, 0.03)",
+      "card": "0 4px 8px 0 rgba(0, 0, 0, 0.08)"
+    },
+    "components": {
+      "calendarWeekView": {
+        "properties": {
+          "padding": ["spacing.md", "spacing.lg"],
+          "itemGap": "spacing.md"
+        },
+        "elements": {
+          "day": {
+            "state": "default",
+            "layout": {
+              "display": "flex",
+              "flexDirection": "column",
+              "alignItems": "center",
+              "gap": "spacing.xs"
+            },
+            "weekdayLabel": {
+              "typography": "typography.styles.label"
+            },
+            "dayNumber": {
+              "typography": "typography.styles.body",
+              "color": "palette.text.primary",
+              "padding": ["spacing.sm", "spacing.sm"],
+              "borderRadius": "shape.borderRadius.sm"
+            },
+            "eventIndicator": {
+              "size": "4px",
+              "color": "palette.primary.main",
+              "shape": "circle"
+            }
+          },
+          "daySelected": {
+            "state": "selected",
+            "extends": "day",
+            "dayNumber": {
+              "backgroundColor": "palette.primary.main",
+              "color": "palette.text.onPrimary"
+            }
+          }
+        }
+      },
+      "infoCard": {
+        "properties": {
+          "backgroundColor": "palette.background.subtle",
+          "padding": "spacing.md",
+          "borderRadius": "shape.borderRadius.md",
+          "margin": ["0", "spacing.lg", "spacing.md"],
+          "shadow": "shadows.subtle"
+        },
+        "elements": {
+          "text": {
+            "typography": "typography.styles.body",
+            "textAlign": "center"
+          }
+        }
+      },
+      "eventCard": {
+        "properties": {
+          "backgroundColor": "palette.background.surface",
+          "padding": "spacing.md",
+          "borderRadius": "shape.borderRadius.md",
+          "margin": ["0", "spacing.lg", "spacing.md"],
+          "shadow": "shadows.card",
+          "layout": {
+            "display": "flex",
+            "flexDirection": "row",
+            "gap": "spacing.md"
+          }
+        },
+        "elements": {
+          "icon": {
+            "type": "leadingIcon",
+            "asset": "book",
+            "color": "palette.icon.main",
+            "fontSize": "24px"
+          },
+          "content": {
+            "layout": {
+              "display": "flex",
+              "flexDirection": "column",
+              "gap": "spacing.xs"
+            }
+          },
+          "title": {
+            "typography": "typography.styles.cardTitle"
+          },
+          "details": {
+            "layout": {
+              "display": "flex",
+              "flexDirection": "row",
+              "alignItems": "center",
+              "gap": "spacing.sm"
+            },
+            "icon": {
+              "color": "palette.icon.main",
+              "fontSize": "16px"
+            },
+            "text": {
+              "typography": "typography.styles.body"
+            }
+          }
+        }
+      },
+      "bottomNavBar": {
+        "properties": {
+          "backgroundColor": "palette.background.surface",
+          "borderTop": "1px solid",
+          "borderColor": "palette.divider.main",
+          "height": "64px",
+          "padding": ["spacing.xs", "0"],
+          "layout": {
+            "display": "flex",
+            "justifyContent": "space-around"
+          }
+        },
+        "elements": {
+          "navItem": {
+            "state": "default",
+            "layout": {
+              "display": "flex",
+              "flexDirection": "column",
+              "alignItems": "center",
+              "gap": "spacing.xs"
+            },
+            "icon": {
+              "fontSize": "24px",
+              "color": "palette.icon.main"
+            },
+            "label": {
+              "typography": "typography.styles.navLabel"
+            }
+          },
+          "navItemActive": {
+            "state": "active",
+            "extends": "navItem",
+            "icon": {
+              "color": "palette.primary.main"
+            },
+            "label": {
+              "color": "palette.primary.main"
+            }
+          }
+        }
+      }
+    }
+  }
+}
